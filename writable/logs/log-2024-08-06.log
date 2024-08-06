@@ -1,0 +1,28 @@
+INFO - 2024-08-06 19:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-06 19:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-06 19:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-06 19:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-06 19:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-06 19:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-06 19:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-06 19:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-06 19:31:24 --> ErrorException: Undefined variable $validation
+[Method: POST, Route: enviar_form]
+in APPPATH\Language\en\Validation.php on line 3.
+ 1 APPPATH\Language\en\Validation.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\xampp\\htdocs\\ProT2_33297780\\app\\Language\\en\\Validation.php', 3)
+ 2 SYSTEMPATH\Language\Language.php(285): require('C:\\xampp\\htdocs\\ProT2_33297780\\app\\Language\\en\\Validation.php')
+ 3 SYSTEMPATH\Language\Language.php(258): CodeIgniter\Language\Language->requireFile('Language/en/Validation.php')
+ 4 SYSTEMPATH\Language\Language.php(168): CodeIgniter\Language\Language->load('Validation', 'en')
+ 5 SYSTEMPATH\Language\Language.php(103): CodeIgniter\Language\Language->parseLine('valid_email', 'en')
+ 6 SYSTEMPATH\Common.php(744): CodeIgniter\Language\Language->getLine('Validation.valid_email', [])
+ 7 SYSTEMPATH\Validation\Validation.php(926): lang('Validation.valid_email')
+ 8 SYSTEMPATH\Validation\Validation.php(363): CodeIgniter\Validation\Validation->getErrorMessage('valid_email', 'email', 'email', '', 'aaaaa', 'email')
+ 9 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('email', 'email', 'aaaaa', [...], [...], 'email')
+10 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+11 APPPATH\Controllers\UsuarioController.php(81): CodeIgniter\Controller->validate([...])
+12 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UsuarioController->formValidation()
+13 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UsuarioController))
+14 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

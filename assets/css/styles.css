@@ -1,0 +1,33 @@
+header {
+  background-color: #69bd45;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  padding: 20px; /* espaciado para la sección de 20 pixeles */
+}
+
+footer {
+  background-color: #e9d92a; /* Color de fondo del footer */
+  color: #fff;
+  
+  
+}
+
+.footer-content {
+  max-width: 800px; /* Ancho máximo del contenido del footer */
+  margin: 0 auto; /* Centrar el contenido del footer horizontalmente */
+  text-align: center;
+  
+}
+
+img {
+  display: block; /* Para eliminar el espacio adicional que algunos navegadores agregan a las img. */
+  margin: 0 auto; /* Centrar las imágenes horizontalmente */
+  max-width: 100%; /* Asegurar que las imágenes no excedan el ancho del contenedor */
+  border: 3px solid #69bd45; /* Contorno de 3px con un color verde (#69bd45) alrededor de la img.*/
+  border-radius: 10px; /* Borde redondeado de 10px para suavizar el contorno */
+}
