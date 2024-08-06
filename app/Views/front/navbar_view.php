@@ -4,7 +4,6 @@ $session = session();
 $nombre = $session->get('nombre');
 $perfil = $session->get('perfil_id');
 ?>
-
 <nav class="navbar navbar-expand-lg bg-body-green">
     <div class="container-fluid">
         <a class="navbar-brand me-auto barra" href="principal">
@@ -28,20 +27,18 @@ $perfil = $session->get('perfil_id');
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <?php echo session('nombre'); ?> (ADMIN)</a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo base_url('/crearUsuario'); ?>">Crear Nuevo Usuario</a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url('/listado'); ?>">Listar Usuarios</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('/crearUsuario'); ?>">Crear Nuevo Usuario</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('/listado'); ?>">Listar Usuarios</a></li>
                             <li><a class="dropdown-item" href="<?php echo base_url('/logout'); ?>">Cerrar Sesión</a></li>
                         </ul>
                     </li>
-
-
                     <!-- MENU PARA LOGUEADOS COMO CLIENTE -->
                 <?php elseif (session()->perfil_id == 2) : ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo session('nombre') ?> (CLIENTE)</a>
                         <ul class="dropdown-menu">
-                            
-                        <li><a class="dropdown-item" href="<?php echo base_url('/logout'); ?>">Cerrar Sesión</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('/assets/pdf/catalogo_variedad_limones.pdf'); ?>">Ver/Descargar Catálogo</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('/logout'); ?>">Cerrar Sesión</a></li>
                         </ul>
                     </li>
                 <?php else : ?>

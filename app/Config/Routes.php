@@ -9,7 +9,7 @@ $routes->get('/', 'Home::index');
 $routes->get('principal', 'Home::index');
 $routes->get('quienes_somos', 'Home::quienes_somos');
 $routes->get('acerca_de', 'Home::acerca_de');
-$routes->get('contactanos', 'Home::contactanos  ');
+$routes->get('contactanos', 'Home::contactanos');
 /*$routes->get('login', 'Home::login');*/
 
 /*RUTAS DEL REGISTRO DE USUARIOS*/

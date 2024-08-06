@@ -3,9 +3,9 @@
     <div class="row d-flex justify-content-center">
       <div class="card col-lg-3" style="width: 50%;">
         <h4>Crear Usuarios</h4>
-        
+
         <?php $validation = \Config\Services::validation(); ?>
-        
+
         <form method="post" action="<?php echo base_url('/enviar_form') ?>">
           <?= csrf_field(); ?>
           <?= csrf_field(); ?>
@@ -60,12 +60,20 @@
                   <?= $error = $validation->getError('pass'); ?>
                 </div>
               <?php } ?>
-            </div>  
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Confirmar Password</label>
+              <input type="password" name="confirmar_pass" class="form-control" placeholder="Vuelva a escribir la password">
+              <?php if ($validation->getError('confirmar_pass')) { ?>
+                <div class="alert alert-danger mt-2">
+                  <?= $error = $validation->getError('confirmar_pass'); ?>
+                </div>
+              <?php } ?>
+            </div>
             <input type="submit" value="Guardar" class="btn btn-success">
             <input type="reset" value="Limpiar" class="btn btn-danger">
           </div>
         </form>
-        
       </div>
     </div>
   </div>

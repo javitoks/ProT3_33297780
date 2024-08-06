@@ -33,7 +33,7 @@ class UsuarioController extends Controller{
     }
 
     public function crearUsuario(){
-        $dato['titulo']='Registro';
+        $dato['titulo']='Crear Usuarios';
         echo view('front/head_view', $dato);
         echo view('front/navbar_view');
         echo view('back/usuario/crear');
